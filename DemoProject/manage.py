@@ -10,7 +10,7 @@ def main():
         from django.core.management.commands import runserver
 
 class Command(runserver.Command):
-    default_port = "8001"
+
       
   default_addr = "0.0.0.0"
         from django.core.management import execute_from_command_line
