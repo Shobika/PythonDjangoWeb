@@ -1,7 +1,7 @@
 FROM python:3.7.2-alpine3.8
 WORKDIR /usr/src/Demo
-COPY requirements.txt ./
+COPY requirements.txt /usr/src/Demo/
 RUN pip install -r requirements.txt
-COPY . .
+COPY manage.py /usr/src/Demo
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", “127.0.0.1:8000"]
