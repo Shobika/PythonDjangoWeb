@@ -7,6 +7,8 @@ import sys
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DemoProject.settings')
     try:
+        from django.core.management.commands.runserver import Command as runserver
+    runserver.default_addr = "0.0.0.0"
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
