@@ -1,6 +1,6 @@
 FROM python:3.7.2-alpine3.8
 WORKDIR /usr/src/Demo
-COPY requirements.txt /usr/src/Demo/
+COPY requiremen* /usr/src/Demo/
 RUN pip install -r requirements.txt
 COPY manage.py /usr/src/Demo
 EXPOSE 8000
